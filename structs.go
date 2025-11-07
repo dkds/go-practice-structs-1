@@ -20,6 +20,12 @@ func main() {
 	appUser.OutputUserDetails()
 	appUser.ClearUserName()
 	appUser.OutputUserDetails()
+
+	admin, err := user.NewAdmin("test@test.com", "*****", userFirstName, userLastName, userBirthdate)
+
+	admin.OutputUserDetails()
+	admin.ClearUserName()
+	admin.OutputUserDetails()
 }
 
 func getUserData(promptText string) string {
